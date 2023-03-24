@@ -13,6 +13,7 @@ class Carro(override val identificador: String, val motor: Motor) : Veiculo(iden
         if (estaLigado()) {
             posicao.alterarPosicaoPara(x, y)
             desligar()
+            return
         }
         ligar()
         posicao.alterarPosicaoPara(x, y)

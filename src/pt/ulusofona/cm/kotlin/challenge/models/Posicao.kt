@@ -6,7 +6,6 @@ class Posicao(var x: Int, var y: Int) {
     fun alterarPosicaoPara(x: Int, y: Int) {
         if (this.x == x && this.y == y) {
             throw AlterarPosicaoException()
-            return
         }
         this.x = x
         this.y = y
