@@ -13,11 +13,11 @@ class Carro(override val identificador: String, val motor: Motor) : Veiculo(iden
         if (estaLigado()) {
             posicao.alterarPosicaoPara(x, y)
             desligar()
-            return
+        } else {
+            ligar()
+            posicao.alterarPosicaoPara(x, y)
+            desligar()
         }
-        ligar()
-        posicao.alterarPosicaoPara(x, y)
-        desligar()
     }
 
     override fun ligar() {
