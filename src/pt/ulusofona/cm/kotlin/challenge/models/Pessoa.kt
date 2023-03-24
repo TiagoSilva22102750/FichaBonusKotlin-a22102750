@@ -50,6 +50,7 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
     fun tirarCarta() {
         if (calcularIdade()) {
             this.carta = Carta()
+            return
         }
         throw MenorDeIdadeException()
     }
