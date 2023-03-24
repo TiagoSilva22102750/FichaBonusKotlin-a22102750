@@ -3,6 +3,7 @@ package pt.ulusofona.cm.kotlin.challenge.models
 import pt.ulusofona.cm.kotlin.challenge.exceptions.MenorDeIdadeException
 import pt.ulusofona.cm.kotlin.challenge.exceptions.PessoaSemCartaException
 import pt.ulusofona.cm.kotlin.challenge.exceptions.VeiculoNaoEncontradoException
+import java.text.SimpleDateFormat
 import java.time.Instant
 import java.util.Date
 
@@ -58,7 +59,13 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) {
         return idadeEmAnos >= 18L
     }
 
+    fun dataFormatada() : String {
+        val formato = SimpleDateFormat("dd-MM-yyyy")
+        val dataModificada = formato.format(dataDeNascimento)
+        return dataModificada.toString()
+    }
+
     override fun toString() : String {
-        return "Pessoa | ${nome} | ${dataDeNascimento} | Posicao | x:${posicao.x} | y:${posicao.y}"
+        return "Pessoa | ${nome} | ${dataFormatada()} | Posicao | x:${posicao.x} | y:${posicao.y}"
     }
 }
