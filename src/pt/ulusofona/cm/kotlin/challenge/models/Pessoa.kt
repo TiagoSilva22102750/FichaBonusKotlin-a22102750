@@ -68,10 +68,10 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
     }
 
     override fun moverPara(x: Int, y: Int) {
-        posicao.alterarPosicao(x, y)
+        posicao.alterarPosicaoPara(x, y)
     }
 
     override fun toString() : String {
-        return "Pessoa | ${nome} | ${dataFormatada()} | Posicao | x:${posicao.x} | y:${posicao.y}"
+        return "Pessoa | ${nome} | ${dataFormatada()} | ${posicao}"
     }
 }

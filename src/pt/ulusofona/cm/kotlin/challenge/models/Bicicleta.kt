@@ -9,11 +9,11 @@ class Bicicleta(override val identificador: String) : Veiculo(identificador) {
     }
 
     override fun moverPara(x: Int, y: Int) {
-        posicao.alterarPosicao(x, y)
+        posicao.alterarPosicaoPara(x, y)
     }
 
     override fun toString() : String {
-        return "Bicicleta | ${identificador} | ${dataFormatada()} | Posicao | x:${posicao.x} | y:${posicao.y}"
+        return "Bicicleta | ${identificador} | ${dataFormatada()} | ${posicao}}"
     }
 
     fun dataFormatada() : String {
