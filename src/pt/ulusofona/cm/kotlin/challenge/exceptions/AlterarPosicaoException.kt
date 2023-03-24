@@ -1,3 +1,3 @@
 package pt.ulusofona.cm.kotlin.challenge.exceptions
 
-class AlterarPosicaoException : Exception("Não é possivel andar no mesmo sitio")
+class AlterarPosicaoException : Exception("Você já se encontra nesta posição. Por favor tente outra.")
