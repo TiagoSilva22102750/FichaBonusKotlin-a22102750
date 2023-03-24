@@ -38,9 +38,10 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
 
         if (!temCarta() && veiculo.requerCarta()) {
             throw PessoaSemCartaException(nome)
+        } else {
+            veiculo.moverPara(x, y)
+            moverPara(x, y)
         }
-        veiculo.moverPara(x, y)
-        moverPara(x, y)
     }
 
     fun temCarta(): Boolean {
