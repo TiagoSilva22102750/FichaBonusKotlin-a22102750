@@ -30,6 +30,7 @@ class Pessoa(val nome: String, val dataDeNascimento: Date) : Movimentavel {
     fun venderVeiculo(identificador: String, comprador : Pessoa) {
         val veiculoAVender = pesquisarVeiculo(identificador)
         veiculos.remove(veiculoAVender)
+        veiculoAVender.dataDeAquisicao = Date.from(Instant.now())
         comprador.veiculos.add(veiculoAVender)
     }
 
